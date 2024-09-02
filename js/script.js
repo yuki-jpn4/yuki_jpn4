@@ -18,3 +18,20 @@ $(function () {
   });
 
 });
+
+// js-fade アニメーション
+$(function() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('scrolled');
+      }
+    });
+  }, {
+    root: null,
+  });
+
+  $('.js-fade').each(function() {
+    observer.observe(this);
+  });
+});

@@ -28,6 +28,20 @@ img {
   display: none;
 }
 
+/* アニメーション等 */
+.js-fade {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(50px);
+  transition: opacity 2.0s,visibility 2.0s, transform 2.0s;
+}
+
+.scrolled {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+
 /*--------------------------------
  レイアウト
 ---------------------------------*/
